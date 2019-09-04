@@ -5,8 +5,8 @@ based on the next pages:
 - http://socialledge.com/sjsu/index.php/DBC_Format
 - https://en.wikipedia.org/wiki/CAN_bus#Frames
 
-**Input parameters to the program
-**
+**Input parameters to the program**
+
 - STRESS_FACTOR = 1.0 - 20.0
 This parameter is used as multiplier to the above table values, in order to perform stress test
 Default value: [1.0]
