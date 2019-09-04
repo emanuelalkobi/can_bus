@@ -17,7 +17,7 @@ TX_FREQUENCY * STRESS_FACTOR * DRIVE_SESSION_TIME in seconds, until the duration
 Default value - [10 minutes]
 
 
-**Data frame **
+**Data frame**
 
 The data frame format in CAN bus 2.0A has the next structure:
 
