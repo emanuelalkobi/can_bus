@@ -18,6 +18,7 @@ Default value - [10 minutes]
 
 
 **Data frame **
+
 The data frame format in CAN bus 2.0A has the next structure:
 
 - Start-of-frame [1]	Denotes the start of frame transmission
