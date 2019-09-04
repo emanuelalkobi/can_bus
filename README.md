@@ -34,6 +34,9 @@ Identifier extension bit (IDE)	1	Must be dominant (0) for base frame format with
 - ACK delimiter	1	Must be recessive (1)
 - End-of-frame (EOF)	7	Must be recessive (1)
 
+
+**Message types**
+
 In this emulation there are only 3 type of messages:
 
 1.**wheel_speeds**
