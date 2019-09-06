@@ -93,7 +93,8 @@ this file has the next information
   
 2.summary_report.txt
   
-This file has the next stats about the simulation:
+This file has the next stats about the simulation
+
 1.number of sent message over the CAN bus
   
 2.number of queued message over the CAN bus
