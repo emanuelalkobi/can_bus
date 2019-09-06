@@ -16,6 +16,7 @@
 #define WHEEL_SPEED_SIZE 8
 #define WHEEL_SPEED_MIN  0
 #define WHEEL_SPEED_MAX  250000
+#define WHEEL_SPEED_BITS_SIZE 108
 #define SCALE            0.01
 
 

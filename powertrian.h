@@ -14,7 +14,7 @@
 #define POWERTRAIN_SIZE  8
 #define RPM_MIN  0
 #define RPM_MAX  15000
-
+#define POWERTRAIN_BITS_SIZE 108
 
 /*
  * Function: create_powertrain

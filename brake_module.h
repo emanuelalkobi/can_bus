@@ -14,7 +14,7 @@
 
 #define BREAK_MODULE_ID 446
 #define BREAK_MODULE_SIZE 3
-
+#define BREAK_BITS_SIZE
 
 /*
  * Function: create_break_module

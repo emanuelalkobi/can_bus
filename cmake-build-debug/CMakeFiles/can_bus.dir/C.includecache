@@ -6,24 +6,12 @@
 
 #IncludeRegexTransform: 
 
-/Users/emanuelalkobi/CLionProjects/can_bus/brake_module.c
-brake_module.h
-/Users/emanuelalkobi/CLionProjects/can_bus/brake_module.h
-
 /Users/emanuelalkobi/CLionProjects/can_bus/brake_module.h
 stdio.h
 -
 stdlib.h
 -
 stdbool.h
--
-data_frame_st.h
-/Users/emanuelalkobi/CLionProjects/can_bus/data_frame_st.h
-
-/Users/emanuelalkobi/CLionProjects/can_bus/data_frame_st.c
-stdio.h
--
-stdlib.h
 -
 data_frame_st.h
 /Users/emanuelalkobi/CLionProjects/can_bus/data_frame_st.h
@@ -41,10 +29,8 @@ brake_module.h
 /Users/emanuelalkobi/CLionProjects/can_bus/brake_module.h
 powertrian.h
 /Users/emanuelalkobi/CLionProjects/can_bus/powertrian.h
-
-/Users/emanuelalkobi/CLionProjects/can_bus/powertrian.c
-powertrian.h
-/Users/emanuelalkobi/CLionProjects/can_bus/powertrian.h
+queue.h
+/Users/emanuelalkobi/CLionProjects/can_bus/queue.h
 
 /Users/emanuelalkobi/CLionProjects/can_bus/powertrian.h
 stdio.h
@@ -56,9 +42,13 @@ stdbool.h
 data_frame_st.h
 /Users/emanuelalkobi/CLionProjects/can_bus/data_frame_st.h
 
-/Users/emanuelalkobi/CLionProjects/can_bus/wheel_speeds.c
-wheel_speeds.h
-/Users/emanuelalkobi/CLionProjects/can_bus/wheel_speeds.h
+/Users/emanuelalkobi/CLionProjects/can_bus/queue.h
+stdio.h
+-
+stdlib.h
+-
+data_frame_st.h
+/Users/emanuelalkobi/CLionProjects/can_bus/data_frame_st.h
 
 /Users/emanuelalkobi/CLionProjects/can_bus/wheel_speeds.h
 stdio.h

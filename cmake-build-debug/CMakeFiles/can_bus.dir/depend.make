@@ -12,11 +12,16 @@ CMakeFiles/can_bus.dir/main.c.o: ../brake_module.h
 CMakeFiles/can_bus.dir/main.c.o: ../data_frame_st.h
 CMakeFiles/can_bus.dir/main.c.o: ../main.c
 CMakeFiles/can_bus.dir/main.c.o: ../powertrian.h
+CMakeFiles/can_bus.dir/main.c.o: ../queue.h
 CMakeFiles/can_bus.dir/main.c.o: ../wheel_speeds.h
 
 CMakeFiles/can_bus.dir/powertrian.c.o: ../data_frame_st.h
 CMakeFiles/can_bus.dir/powertrian.c.o: ../powertrian.c
 CMakeFiles/can_bus.dir/powertrian.c.o: ../powertrian.h
+
+CMakeFiles/can_bus.dir/queue.c.o: ../data_frame_st.h
+CMakeFiles/can_bus.dir/queue.c.o: ../queue.c
+CMakeFiles/can_bus.dir/queue.c.o: ../queue.h
 
 CMakeFiles/can_bus.dir/wheel_speeds.c.o: ../data_frame_st.h
 CMakeFiles/can_bus.dir/wheel_speeds.c.o: ../wheel_speeds.c

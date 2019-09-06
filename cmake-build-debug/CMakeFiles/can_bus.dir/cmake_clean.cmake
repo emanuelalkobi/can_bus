@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/can_bus.dir/wheel_speeds.c.o"
   "CMakeFiles/can_bus.dir/brake_module.c.o"
   "CMakeFiles/can_bus.dir/powertrian.c.o"
+  "CMakeFiles/can_bus.dir/queue.c.o"
   "can_bus.pdb"
   "can_bus"
 )

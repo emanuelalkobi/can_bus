@@ -99,6 +99,12 @@
 		<Unit filename="/Users/emanuelalkobi/CLionProjects/can_bus/powertrian.h">
 			<Option target="can_bus"/>
 		</Unit>
+		<Unit filename="/Users/emanuelalkobi/CLionProjects/can_bus/queue.c">
+			<Option target="can_bus"/>
+		</Unit>
+		<Unit filename="/Users/emanuelalkobi/CLionProjects/can_bus/queue.h">
+			<Option target="can_bus"/>
+		</Unit>
 		<Unit filename="/Users/emanuelalkobi/CLionProjects/can_bus/wheel_speeds.c">
 			<Option target="can_bus"/>
 		</Unit>
