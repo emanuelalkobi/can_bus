@@ -86,9 +86,11 @@ int main() {
     printf("----------------------------------------------------------\n");
     printf("simulation started\n");
     printf("----------------------------------------------------------\n");
+
     int wheel_speed_ctr=0;
     int powertrain_ctr=0;
     int break_module_ctr=0;
+    
     while(curr_time_usec<drive_session_time_usec){
         if(curr_time_usec%wheel_speed_dif==0){
 
@@ -131,7 +133,6 @@ int main() {
             }
             else if(break_module_q->num_el){
                 break_module_msg++;
-                //printf("start at %d transmitting break module  message: \n",curr_time_usec);
                 queue_node* break_node = dequeue(break_module_q);
                 break_module_jitter+=curr_time_usec-break_node->time;
                 fprintf(sent_msg,"<%d usec>: ",curr_time_usec);
@@ -143,7 +144,6 @@ int main() {
             }
             else if(wheel_speeds_q->num_el){
                 wheel_speeds_msg++;
-                //printf("start at %d transmitting wheel speeds message:\n ",curr_time_usec);
                 queue_node* wheel_speeds_node = dequeue(wheel_speeds_q);
                 wheel_speeds_jitter+=curr_time_usec-wheel_speeds_node->time;
                 fprintf(sent_msg,"<%d usec>: ",curr_time_usec);
@@ -160,6 +160,7 @@ int main() {
 
         curr_time_usec+=RESOLUTION;
     }
+
 
     delete_queue(powertrain_q);
     delete_queue(wheel_speeds_q);
@@ -196,6 +197,9 @@ int main() {
     fprintf(summary_report, "break module messages jitter %f msec\n",(float)break_module_jitter/(USEC_TO_MSEC*break_module_msg));
     fprintf(summary_report, "power train  messages jitter %f msec\n",(float)break_module_jitter/(USEC_TO_MSEC*powertrain_msg));
 
+    fprintf(summary_report,"---------------------------------------------------------------------------------------------------------------\n");
+
+    fprintf(summary_report, "average bandwidth %f kbps \n",(float)(wheel_speeds_msg*WHEEL_SPEED_BITS_SIZE+powertrain_msg*POWERTRAIN_BITS_SIZE+break_module_msg*BREAK_MODULE_BITS_SIZE)/(1000*drive_session_time_sec));
     fprintf(summary_report,"---------------------------------------------------------------------------------------------------------------\n");
 
     printf("----------------------------------------------------------\n");
