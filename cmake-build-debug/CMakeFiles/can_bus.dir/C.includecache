@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/emanuelalkobi/CLionProjects/can_bus/func.h
+
+/Users/emanuelalkobi/CLionProjects/can_bus/main.c
+stdio.h
+-
+func.h
+/Users/emanuelalkobi/CLionProjects/can_bus/func.h
+

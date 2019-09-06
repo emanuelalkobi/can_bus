@@ -1,0 +1,3 @@
+/Users/emanuelalkobi/CLionProjects/can_bus/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/emanuelalkobi/CLionProjects/can_bus/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/emanuelalkobi/CLionProjects/can_bus/cmake-build-debug/CMakeFiles/can_bus.dir
