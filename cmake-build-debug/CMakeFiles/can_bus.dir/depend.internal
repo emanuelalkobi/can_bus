@@ -12,7 +12,12 @@ CMakeFiles/can_bus.dir/main.c.o
  /Users/emanuelalkobi/CLionProjects/can_bus/brake_module.h
  /Users/emanuelalkobi/CLionProjects/can_bus/data_frame_st.h
  /Users/emanuelalkobi/CLionProjects/can_bus/main.c
+ /Users/emanuelalkobi/CLionProjects/can_bus/powertrian.h
  /Users/emanuelalkobi/CLionProjects/can_bus/wheel_speeds.h
+CMakeFiles/can_bus.dir/powertrian.c.o
+ /Users/emanuelalkobi/CLionProjects/can_bus/data_frame_st.h
+ /Users/emanuelalkobi/CLionProjects/can_bus/powertrian.c
+ /Users/emanuelalkobi/CLionProjects/can_bus/powertrian.h
 CMakeFiles/can_bus.dir/wheel_speeds.c.o
  /Users/emanuelalkobi/CLionProjects/can_bus/data_frame_st.h
  /Users/emanuelalkobi/CLionProjects/can_bus/wheel_speeds.c

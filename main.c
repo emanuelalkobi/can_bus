@@ -1,17 +1,16 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <stdbool.h>
+
 #include "data_frame_st.h"
 #include "wheel_speeds.h"
 #include "brake_module.h"
+#include "powertrian.h"
+
 
 #define  WHEEL_SPEEDS_FREQ 100
 #define  BREAK_MODULE_FREQ 10
 #define  POWERTRAIN_MODULE_FREQ  25
 
 
-#define BREAK_MODULE_ID 446
-#define POWERTRAIN_DATA 380
 
 
 
@@ -34,6 +33,7 @@ int main() {
     printf("------\n");
     data_frame* df1=create_wheel_speeds(5000,7500,10000,12500);
     data_frame* df2=create_break_module(1);
+    data_frame* df3=create_powertrain(14000);
     printf("------\n");
 
     printf("drive time in sec %d\n",drive_session_time_sec);

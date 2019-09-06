@@ -204,6 +204,33 @@ main.c.s:
 	$(MAKE) -f CMakeFiles/can_bus.dir/build.make CMakeFiles/can_bus.dir/main.c.s
 .PHONY : main.c.s
 
+powertrian.o: powertrian.c.o
+
+.PHONY : powertrian.o
+
+# target to build an object file
+powertrian.c.o:
+	$(MAKE) -f CMakeFiles/can_bus.dir/build.make CMakeFiles/can_bus.dir/powertrian.c.o
+.PHONY : powertrian.c.o
+
+powertrian.i: powertrian.c.i
+
+.PHONY : powertrian.i
+
+# target to preprocess a source file
+powertrian.c.i:
+	$(MAKE) -f CMakeFiles/can_bus.dir/build.make CMakeFiles/can_bus.dir/powertrian.c.i
+.PHONY : powertrian.c.i
+
+powertrian.s: powertrian.c.s
+
+.PHONY : powertrian.s
+
+# target to generate assembly for a file
+powertrian.c.s:
+	$(MAKE) -f CMakeFiles/can_bus.dir/build.make CMakeFiles/can_bus.dir/powertrian.c.s
+.PHONY : powertrian.c.s
+
 wheel_speeds.o: wheel_speeds.c.o
 
 .PHONY : wheel_speeds.o
@@ -249,6 +276,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... powertrian.o"
+	@echo "... powertrian.i"
+	@echo "... powertrian.s"
 	@echo "... wheel_speeds.o"
 	@echo "... wheel_speeds.i"
 	@echo "... wheel_speeds.s"

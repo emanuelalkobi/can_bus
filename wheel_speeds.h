@@ -18,7 +18,6 @@
 #define WHEEL_SPEED_MAX  250000
 #define SCALE            0.01
 
-#define BITS_MASK 0x7FFF;
 
 
 
