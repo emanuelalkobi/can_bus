@@ -81,7 +81,8 @@ The user can set the next parameters:
 
 This parameter is used as multiplier to the message frequencies.
 
-**Output**
+**Output(Output for default values are stores under output folder)**
+
 
 2 files are generated during the simulation
 
