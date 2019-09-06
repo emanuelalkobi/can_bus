@@ -29,7 +29,7 @@ The data frame format in CAN bus 2.0A has the next structure:
 Identifier extension bit (IDE)	1	Must be dominant (0) for base frame format with 11-bit identifiers
 - Reserved bit (r0)	1	Reserved bit. Must be dominant (0), but accepted as either dominant or recessive.
 - Data length code (DLC) (yellow)	4	Number of bytes of data (0–8 bytes)[a]
-- Data field (red)	0–64 (0-8 bytes)	Data to be transmitted (length in bytes dictated by DLC field)
+- Data field (red)	0–64 (0-8 bytes)	Data to be transmitted (length in bytes dictated by DLC field).The data is stored by the DBC format.
 - CRC	15	Cyclic redundancy check
 - CRC delimiter	1	Must be recessive (1)
 - ACK slot	1	Transmitter sends recessive (1) and any receiver can assert a dominant (0)
