@@ -71,9 +71,10 @@ void insert_wheel_speed_dbc_format( data_frame* data_frame_new,unsigned int fl,u
  *   parse the data stored in the frame based on the dbc format
  *
  *   data_frame_new : the data frame to parse from  the wheel speeds
+ *   sent_msg       : pointer to a file in order to write to it the output
  *
  */
-void parse_wheel_speed_dbc_format(data_frame* data_frame_new);
+void parse_wheel_speed_dbc_format(data_frame* data_frame_ne, FILE *sent_msg);
 
 
 

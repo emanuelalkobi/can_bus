@@ -1,0 +1,7 @@
+---------------------------------------------------------------------------------------------------------------
+summary_report over CAN bus for  600 seconds  stress  factor 1 resolution 100 usec 
+---------------------------------------------------------------------------------------------------------------
+total sent messages        81000 
+wheel speeds sent messages 60000 
+break module sent messages 6000 
+power train  sent messages 15000 

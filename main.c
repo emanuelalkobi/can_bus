@@ -42,6 +42,22 @@ int main() {
     int time_to_transfer_brake= round_resolution(BREAK_MODULE_BITS_SIZE*USEC/bit_rate,RESOLUTION);
     int time_to_transfer_power= round_resolution(POWERTRAIN_BITS_SIZE*USEC/bit_rate,RESOLUTION);
 
+    int powertrain_msg   = 0;
+    int wheel_speeds_msg = 0;
+    int break_module_msg = 0;
+
+    FILE *sent_msg;
+    FILE *summary_report;
+
+    sent_msg       = fopen("sent_messages.txt", "w+");
+    summary_report = fopen("summary_report.txt", "w+");
+    fprintf(sent_msg,"---------------------------------------------------------------------------------------------------------------\n");
+    fprintf(sent_msg, "sent messages over CAN bus for  %d seconds  stress  factor %d resolution %d usec \n",drive_session_time_sec,stress_factor,RESOLUTION);
+    fprintf(sent_msg,"---------------------------------------------------------------------------------------------------------------\n");
+
+    fprintf(summary_report,"---------------------------------------------------------------------------------------------------------------\n");
+    fprintf(summary_report, "summary_report over CAN bus for  %d seconds  stress  factor %d resolution %d usec \n",drive_session_time_sec,stress_factor,RESOLUTION);
+    fprintf(summary_report,"---------------------------------------------------------------------------------------------------------------\n");
 
     printf("------\n");
     data_frame* df1;//=create_wheel_speeds(5000,7500,10000,12500);
@@ -74,19 +90,19 @@ int main() {
     while(curr_time_usec<drive_session_time_usec){
        // printf("curr time is %d\n",curr_time_usec);
         if(curr_time_usec%wheel_speed_dif==0){
-            printf("create new wheel_speed message and insert to queue %d \n",curr_time_usec);
+            //printf("create new wheel_speed message and insert to queue %d \n",curr_time_usec);
             df1=create_wheel_speeds(5000,7500,10000,12500);
             enqueue(wheel_speeds_q,df1,curr_time_usec);
             //parse_wheel_speed_dbc_format(df1);
         }
         if(curr_time_usec%break_module_dif==0){
-            printf("create new break message and insert to queue %d \n",curr_time_usec);
+            //printf("create new break message and insert to queue %d \n",curr_time_usec);
             df2=create_break_module(1);
             enqueue(break_module_q,df2,curr_time_usec);
             //parse_brake_dbc_format(df2);
         }
         if(curr_time_usec%power_train_dif==0){
-            printf("create new break powerrain t and insert to queue %d \n",curr_time_usec);
+            //printf("create new break powerrain t and insert to queue %d \n",curr_time_usec);
             df3=create_powertrain(10000);
             enqueue(powertrain_q,df3,curr_time_usec);
             //parse_powertrain_dbc_format(df3);
@@ -95,30 +111,34 @@ int main() {
         //trying to transmit a message with the lowest id : powertrain,break,wheel speeds
         if (bus_free==0){
             if(powertrain_q->num_el){
-                printf("start at %d transmitting power train message: ",curr_time_usec);
+                powertrain_msg++;
+                printf("start at %d transmitting power train message:\n",curr_time_usec);
                 queue_node* powertrain_node = dequeue(powertrain_q);
-                parse_powertrain_dbc_format(powertrain_node->key);
+                fprintf(sent_msg,"<%d usec>: ",curr_time_usec);
+                parse_powertrain_dbc_format(powertrain_node->key,sent_msg);
                 delete_node(powertrain_node);
                 bus_free=time_to_transfer_power-RESOLUTION;
 
             }
             else if(break_module_q->num_el){
-                printf("start at %d transmitting break module  message: ",curr_time_usec);
+                break_module_msg++;
+                printf("start at %d transmitting break module  message: \n",curr_time_usec);
                 queue_node* break_node = dequeue(break_module_q);
-                parse_brake_dbc_format(break_node->key);
+                fprintf(sent_msg,"<%d usec>: ",curr_time_usec);
+                parse_brake_dbc_format(break_node->key,sent_msg);
                 delete_node(break_node);
                 bus_free=time_to_transfer_brake-RESOLUTION;
 
 
             }
             else if(wheel_speeds_q->num_el){
-                printf("start at %d transmitting wheel speeds message: ",curr_time_usec);
+                wheel_speeds_msg++;
+                printf("start at %d transmitting wheel speeds message:\n ",curr_time_usec);
                 queue_node* wheel_speeds_node = dequeue(wheel_speeds_q);
-                parse_wheel_speed_dbc_format(wheel_speeds_node->key);
+                fprintf(sent_msg,"<%d usec>: ",curr_time_usec);
+                parse_wheel_speed_dbc_format(wheel_speeds_node->key,sent_msg);
                 delete_node(wheel_speeds_node);
                 bus_free=time_to_transfer_wheel-RESOLUTION;
-
-
 
             }
 
@@ -133,6 +153,11 @@ int main() {
     delete_queue(powertrain_q);
     delete_queue(wheel_speeds_q);
     delete_queue(break_module_q);
+
+    fprintf(summary_report, "total sent messages        %d \n",wheel_speeds_msg+break_module_msg+powertrain_msg);
+    fprintf(summary_report, "wheel speeds sent messages %d \n",wheel_speeds_msg);
+    fprintf(summary_report, "break module sent messages %d \n",break_module_msg);
+    fprintf(summary_report, "power train  sent messages %d \n",powertrain_msg);
 
 
 

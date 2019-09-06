@@ -25,13 +25,14 @@ void insert_wheel_speed_dbc_format( data_frame* data_frame_new,unsigned int fl,u
 
 }
 
-void parse_wheel_speed_dbc_format(data_frame* data_frame_new){
+void parse_wheel_speed_dbc_format(data_frame* data_frame_new, FILE *sent_msg){
 
     unsigned  int fl_short_new = (data_frame_new->data_field[0])<< 7        | (data_frame_new->data_field[1])>>1                                      ;
     unsigned  int fr_short_new = (data_frame_new->data_field[1] & 0x1)<< 14 | (data_frame_new->data_field[2])<<6 | (data_frame_new->data_field[3])>>2 ;
     unsigned  int rl_short_new = (data_frame_new->data_field[3] & 0x3)<< 13 | (data_frame_new->data_field[4])<<5 | (data_frame_new->data_field[5])>>3 ;
     unsigned  int rr_short_new = (data_frame_new->data_field[5] & 0x7)<< 12 | (data_frame_new->data_field[6])<<4 | (data_frame_new->data_field[7])>>4 ;
-    printf("wheel_speeds message fl  %u kmh , fr %u kmh , rl %u kmh , rr %u kmh    \n", fl_short_new,fr_short_new,rl_short_new,rr_short_new);
+    //printf("wheel_speeds message fl  %u kmh , fr %u kmh , rl %u kmh , rr %u kmh    \n", fl_short_new,fr_short_new,rl_short_new,rr_short_new);
+    fprintf(sent_msg, "wheel speeds message: fl  %u kmh , fr %u kmh , rl %u kmh , rr %u kmh    \n", fl_short_new,fr_short_new,rl_short_new,rr_short_new);
 }
 
 

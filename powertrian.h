@@ -44,9 +44,10 @@ bool rpm_out_of_bounds(unsigned int rpm);
  *   parse the data stored in the frame based on the dbc format
  *
  *   data_frame_new : the data frame to parse from  the powertrain
+ *   sent_msg       : pointer to a file in order to write to it the output
  *
  */
-void parse_powertrain_dbc_format(data_frame* data_frame_new);
+void parse_powertrain_dbc_format(data_frame* data_frame_new, FILE *sent_msg);
 
 
 /*

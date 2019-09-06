@@ -54,9 +54,15 @@ void enqueue( queue* q, data_frame* df, unsigned int time)
 }
 
 void delete_node(queue_node* node){
+    delete_data_frame(node->key);
     free(node);
 }
 
 void delete_queue(queue* q){
+    //if there are un-sent messages ,delete them and free memory
+    while(q->num_el>0){
+        queue_node* node = dequeue(q);
+        delete_node(node);
+    }
     free(q);
 }

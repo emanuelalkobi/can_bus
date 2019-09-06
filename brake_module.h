@@ -47,9 +47,9 @@ void insert_brake_dbc_format(data_frame* data_frame_new,unsigned  int brake_pres
  *   parse the data stored in the frame based on the dbc format
  *
  *   data_frame_new : the data frame to parse from  the break module
- *
+ *   sent_msg       : pointer to a file in order to write to it the output
  */
-void parse_brake_dbc_format(data_frame* data_frame_new);
+void parse_brake_dbc_format(data_frame* data_frame_new,FILE *sent_msg);
 
 
 

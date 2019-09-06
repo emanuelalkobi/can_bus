@@ -42,6 +42,10 @@ stdbool.h
 data_frame_st.h
 /Users/emanuelalkobi/CLionProjects/can_bus/data_frame_st.h
 
+/Users/emanuelalkobi/CLionProjects/can_bus/queue.c
+queue.h
+/Users/emanuelalkobi/CLionProjects/can_bus/queue.h
+
 /Users/emanuelalkobi/CLionProjects/can_bus/queue.h
 stdio.h
 -
