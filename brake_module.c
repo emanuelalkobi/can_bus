@@ -28,3 +28,10 @@ data_frame* create_break_module( unsigned int brake_press){
 
     return data_frame_new;
 }
+
+int generate_break(int num){
+    if (num<=23){
+        return(0);
+    }
+    return(1);
+}

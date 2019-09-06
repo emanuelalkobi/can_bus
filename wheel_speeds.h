@@ -12,10 +12,11 @@
 #include <stdbool.h>
 #include "data_frame_st.h"
 
+#define  WHEEL_SPEEDS_FREQ 100
 #define WHEEL_SPEED_ID   464
 #define WHEEL_SPEED_SIZE 8
 #define WHEEL_SPEED_MIN  0
-#define WHEEL_SPEED_MAX  250000
+#define WHEEL_SPEED_MAX  25000
 #define WHEEL_SPEED_BITS_SIZE 108
 #define SCALE            0.01
 
@@ -76,6 +77,18 @@ void insert_wheel_speed_dbc_format( data_frame* data_frame_new,unsigned int fl,u
  */
 void parse_wheel_speed_dbc_format(data_frame* data_frame_ne, FILE *sent_msg);
 
+
+/*
+ * Function: generate_wheel_speed
+ * ----------------------------
+ *   generate the same wheel speed from 0kmh to 240kmh
+ *
+ *   num : the current value from where we generate the wheel speed
+ *
+ *  returns: wheel speed kmh
+ *
+ */
+int generate_wheel_speed(int num);
 
 
 #endif //CAN_BUS_WHEEL_SPEEDS_H

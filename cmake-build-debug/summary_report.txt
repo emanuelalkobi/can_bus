@@ -5,3 +5,13 @@ total sent messages        81000
 wheel speeds sent messages 60000 
 break module sent messages 6000 
 power train  sent messages 15000 
+---------------------------------------------------------------------------------------------------------------
+total queued messages        81000 
+wheel speeds queued messages 60000 
+break module queued messages 6000 
+power train  queued messages 15000 
+---------------------------------------------------------------------------------------------------------------
+wheel speeds messages jitter 0.285000 msec 
+break module messages jitter 0.450000 msec
+power train  messages jitter 0.180000 msec
+---------------------------------------------------------------------------------------------------------------

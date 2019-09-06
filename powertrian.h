@@ -10,6 +10,7 @@
 #include <stdbool.h>
 #include "data_frame_st.h"
 
+#define  POWERTRAIN_MODULE_FREQ  25
 #define POWERTRAIN_ID   464
 #define POWERTRAIN_SIZE  8
 #define RPM_MIN  0
@@ -60,5 +61,18 @@ void parse_powertrain_dbc_format(data_frame* data_frame_new, FILE *sent_msg);
  *
  */
 void insert_powertrain_dbc_format( data_frame* data_frame_new,unsigned int rpm);
+
+
+/*
+ * Function: generate_powertrain
+ * ----------------------------
+ *   generate the powet train from 0kmh to 15000 rpm
+ *
+ *   num : the current value from where we generate the power train
+ *
+ *  returns:power train rpm
+ *
+ */
+int generate_powertrain(int num);
 
 #endif //CAN_BUS_POWERTRIAN_H

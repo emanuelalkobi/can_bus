@@ -41,3 +41,10 @@ data_frame* create_powertrain( unsigned int rpm){
     insert_powertrain_dbc_format(data_frame_new,rpm);
     return data_frame_new;
 }
+
+int generate_powertrain(int num){
+    if (num<=63){
+        return(230*num);
+    }
+    return(-230*num+29000);
+}

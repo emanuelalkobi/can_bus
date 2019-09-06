@@ -32,7 +32,7 @@ void parse_wheel_speed_dbc_format(data_frame* data_frame_new, FILE *sent_msg){
     unsigned  int rl_short_new = (data_frame_new->data_field[3] & 0x3)<< 13 | (data_frame_new->data_field[4])<<5 | (data_frame_new->data_field[5])>>3 ;
     unsigned  int rr_short_new = (data_frame_new->data_field[5] & 0x7)<< 12 | (data_frame_new->data_field[6])<<4 | (data_frame_new->data_field[7])>>4 ;
     //printf("wheel_speeds message fl  %u kmh , fr %u kmh , rl %u kmh , rr %u kmh    \n", fl_short_new,fr_short_new,rl_short_new,rr_short_new);
-    fprintf(sent_msg, "wheel speeds message: fl  %u kmh , fr %u kmh , rl %u kmh , rr %u kmh    \n", fl_short_new,fr_short_new,rl_short_new,rr_short_new);
+    fprintf(sent_msg, "wheel speeds message: fl  %f kmh , fr %f kmh , rl %f kmh , rr %f kmh    \n", fl_short_new*SCALE,fr_short_new*SCALE,rl_short_new*SCALE,rr_short_new*SCALE);
 }
 
 
@@ -52,4 +52,12 @@ data_frame* create_wheel_speeds( unsigned int fl,unsigned int fr,unsigned int rl
 
 
     return data_frame_new;
+}
+
+int generate_wheel_speed(int num){
+    if (num<=250){
+        return(100*num);
+    }
+    return(-100*num+50000);
+    return (num%WHEEL_SPEED_MAX);
 }

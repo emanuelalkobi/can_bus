@@ -12,6 +12,7 @@
 #include <stdbool.h>
 #include "data_frame_st.h"
 
+#define  BREAK_MODULE_FREQ 10
 #define BREAK_MODULE_ID 446
 #define BREAK_MODULE_SIZE 3
 #define BREAK_MODULE_BITS_SIZE 68
@@ -51,6 +52,18 @@ void insert_brake_dbc_format(data_frame* data_frame_new,unsigned  int brake_pres
  */
 void parse_brake_dbc_format(data_frame* data_frame_new,FILE *sent_msg);
 
+
+/*
+ * Function: generate_break
+ * ----------------------------
+ *   generate the break to 0 or 1
+ *
+ *   num : the current value from where we generate thebreak
+ *
+ *  returns:break status
+ *
+ */
+int generate_break(int num);
 
 
 #endif //CAN_BUS_BRAKE_MODULE_H
