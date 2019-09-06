@@ -72,6 +72,7 @@ As the CAN bus is free(no other message is transmited over it  ) it tries to sen
 
 
 **Inputs**
+
 The user can set the next parameters:
 
 1.simulation time in seconds between 0 to 1800 seconds(0 to 30 minutes). default value is 600 seconds(10 minutes)
