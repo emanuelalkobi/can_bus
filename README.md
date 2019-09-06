@@ -56,7 +56,27 @@ In this emulation there are only 3 type of messages:
 - data size : 8 bytes
 - frequency:25 hz
 
-**Algorith**
+**Running instructions**
+
+1.clone the prject:
+
+git clone https://github.com/emanuelalkobi/can_bus.git
+
+2.change dorectory to cmake-build-debug
+
+cd cmake-build-debug
+
+3.run make
+
+make
+
+4.run the executable file 
+
+./can_bus
+
+5.Follow the menu and Enjoy:)
+
+**Algorithm**
 
 The CAN bus work in the next way:
 
