@@ -55,7 +55,7 @@ In this emulation there are only 3 type of messages:
 - id:380
 - data size : 8 bytes
 - frequency:25 hz
-- 
+
 **Algorith**
 The CAN bus work in the next way:
 There are 3 queues for each message type.
