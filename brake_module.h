@@ -14,6 +14,8 @@
 
 #define BREAK_MODULE_ID 446
 #define BREAK_MODULE_SIZE 3
+#define BREAK_MODULE_BITS_SIZE 68
+
 #define BREAK_BITS_SIZE
 
 /*

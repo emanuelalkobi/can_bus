@@ -73,11 +73,22 @@ queue_node* dequeue( queue* q);
 /*
  * Function: delete_node
  * ----------------------------
- *   free memore allocated to a node
+ *   free memory allocated to a node
  *   node : pointer to the deleted node
  *
  */
 void delete_node(queue_node* node);
+
+
+/*
+ * Function: delete_queue
+ * ----------------------------
+ *   free memory allocated to a queue
+ *   node : pointer to the deleted queue
+ *
+ */
+void delete_queue(queue* q);
+
 
 
 

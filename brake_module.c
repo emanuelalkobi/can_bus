@@ -9,7 +9,7 @@ void insert_brake_dbc_format(data_frame* data_frame_new,unsigned  int brake_pres
 }
 void parse_brake_dbc_format(data_frame* data_frame_new){
     unsigned break_module_new=data_frame_new->data_field[0]>>3;
-    printf(" break is %d !!\n",break_module_new);
+    printf("break status is  %d \n",break_module_new);
     return;
 
 }
@@ -25,7 +25,6 @@ data_frame* create_break_module( unsigned int brake_press){
         return  NULL;
     }
     insert_brake_dbc_format(data_frame_new,brake_press);
-    parse_brake_dbc_format(data_frame_new);
 
 
 

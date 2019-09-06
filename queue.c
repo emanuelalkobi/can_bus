@@ -56,3 +56,7 @@ void enqueue( queue* q, data_frame* df, unsigned int time)
 void delete_node(queue_node* node){
     free(node);
 }
+
+void delete_queue(queue* q){
+    free(q);
+}
