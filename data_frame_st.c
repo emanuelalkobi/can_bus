@@ -23,7 +23,7 @@ data_frame* create_data_frame(int id,int size){
     data_frame_new->ide            =0;
     data_frame_new->r0             =0;
     data_frame_new->dlc            =size;
-    data_frame_new->data_field     =(unsigned int*)malloc(size);
+    data_frame_new->data_field     =(unsigned char*)malloc(size);
 
     if(!data_frame_new->data_field){
         printf("Error in allocation memory data_frame->data_field");
@@ -44,4 +44,10 @@ void delete_data_frame(data_frame* data_frame_to_delete){
     free(data_frame_to_delete->data_field);
     free(data_frame_to_delete);
     return;
+}
+
+
+int round_resolution(int num,int res){
+    int tmp=(num/res)*res+res;
+    return tmp;
 }

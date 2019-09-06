@@ -49,6 +49,19 @@ data_frame* create_data_frame(int id,int size);
  */
 void delete_data_frame(data_frame* data_frame_to_delete);
 
+
+/*
+ * Function: round_resolution
+ * ----------------------------
+ *   return the closest number to num that is a multiplty of res
+ *
+ *   num:   num to round
+ *   res:   the number we want find multiple of
+ *
+ *  returns: the closest biggest number to num that is a  multiply of res
+ */
+
+int round_resolution(int num,int res);
 #endif //CAN_BUS_DATA_FRAME_ST_H
 
 

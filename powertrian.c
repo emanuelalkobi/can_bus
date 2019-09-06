@@ -22,7 +22,6 @@ void insert_powertrain_dbc_format( data_frame* data_frame_new,unsigned int rpm){
 
 void parse_powertrain_dbc_format(data_frame* data_frame_new,FILE *sent_msg){
     unsigned  int new_rpm=(data_frame_new->data_field[2])<<15 | (data_frame_new->data_field[3])<<7 | (data_frame_new->data_field[4])>>1 ;
-    //printf("power train  is %d rpm \n",new_rpm);
     fprintf(sent_msg, "power train  message: %d rpm \n",new_rpm);
 
 }
