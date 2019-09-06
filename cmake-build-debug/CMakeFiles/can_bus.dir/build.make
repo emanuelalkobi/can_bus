@@ -70,32 +70,47 @@ CMakeFiles/can_bus.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/can_bus.dir/main.c.s"
 	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/emanuelalkobi/CLionProjects/can_bus/main.c -o CMakeFiles/can_bus.dir/main.c.s
 
-CMakeFiles/can_bus.dir/func.c.o: CMakeFiles/can_bus.dir/flags.make
-CMakeFiles/can_bus.dir/func.c.o: ../func.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/emanuelalkobi/CLionProjects/can_bus/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/can_bus.dir/func.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/can_bus.dir/func.c.o   -c /Users/emanuelalkobi/CLionProjects/can_bus/func.c
+CMakeFiles/can_bus.dir/data_frame_st.c.o: CMakeFiles/can_bus.dir/flags.make
+CMakeFiles/can_bus.dir/data_frame_st.c.o: ../data_frame_st.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/emanuelalkobi/CLionProjects/can_bus/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/can_bus.dir/data_frame_st.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/can_bus.dir/data_frame_st.c.o   -c /Users/emanuelalkobi/CLionProjects/can_bus/data_frame_st.c
 
-CMakeFiles/can_bus.dir/func.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/can_bus.dir/func.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/emanuelalkobi/CLionProjects/can_bus/func.c > CMakeFiles/can_bus.dir/func.c.i
+CMakeFiles/can_bus.dir/data_frame_st.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/can_bus.dir/data_frame_st.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/emanuelalkobi/CLionProjects/can_bus/data_frame_st.c > CMakeFiles/can_bus.dir/data_frame_st.c.i
 
-CMakeFiles/can_bus.dir/func.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/can_bus.dir/func.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/emanuelalkobi/CLionProjects/can_bus/func.c -o CMakeFiles/can_bus.dir/func.c.s
+CMakeFiles/can_bus.dir/data_frame_st.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/can_bus.dir/data_frame_st.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/emanuelalkobi/CLionProjects/can_bus/data_frame_st.c -o CMakeFiles/can_bus.dir/data_frame_st.c.s
+
+CMakeFiles/can_bus.dir/wheel_speeds.c.o: CMakeFiles/can_bus.dir/flags.make
+CMakeFiles/can_bus.dir/wheel_speeds.c.o: ../wheel_speeds.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/emanuelalkobi/CLionProjects/can_bus/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/can_bus.dir/wheel_speeds.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/can_bus.dir/wheel_speeds.c.o   -c /Users/emanuelalkobi/CLionProjects/can_bus/wheel_speeds.c
+
+CMakeFiles/can_bus.dir/wheel_speeds.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/can_bus.dir/wheel_speeds.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/emanuelalkobi/CLionProjects/can_bus/wheel_speeds.c > CMakeFiles/can_bus.dir/wheel_speeds.c.i
+
+CMakeFiles/can_bus.dir/wheel_speeds.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/can_bus.dir/wheel_speeds.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/emanuelalkobi/CLionProjects/can_bus/wheel_speeds.c -o CMakeFiles/can_bus.dir/wheel_speeds.c.s
 
 # Object files for target can_bus
 can_bus_OBJECTS = \
 "CMakeFiles/can_bus.dir/main.c.o" \
-"CMakeFiles/can_bus.dir/func.c.o"
+"CMakeFiles/can_bus.dir/data_frame_st.c.o" \
+"CMakeFiles/can_bus.dir/wheel_speeds.c.o"
 
 # External object files for target can_bus
 can_bus_EXTERNAL_OBJECTS =
 
 can_bus: CMakeFiles/can_bus.dir/main.c.o
-can_bus: CMakeFiles/can_bus.dir/func.c.o
+can_bus: CMakeFiles/can_bus.dir/data_frame_st.c.o
+can_bus: CMakeFiles/can_bus.dir/wheel_speeds.c.o
 can_bus: CMakeFiles/can_bus.dir/build.make
 can_bus: CMakeFiles/can_bus.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/emanuelalkobi/CLionProjects/can_bus/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable can_bus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/emanuelalkobi/CLionProjects/can_bus/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable can_bus"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/can_bus.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

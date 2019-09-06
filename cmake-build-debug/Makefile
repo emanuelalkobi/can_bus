@@ -123,32 +123,32 @@ can_bus/fast:
 	$(MAKE) -f CMakeFiles/can_bus.dir/build.make CMakeFiles/can_bus.dir/build
 .PHONY : can_bus/fast
 
-func.o: func.c.o
+data_frame_st.o: data_frame_st.c.o
 
-.PHONY : func.o
+.PHONY : data_frame_st.o
 
 # target to build an object file
-func.c.o:
-	$(MAKE) -f CMakeFiles/can_bus.dir/build.make CMakeFiles/can_bus.dir/func.c.o
-.PHONY : func.c.o
+data_frame_st.c.o:
+	$(MAKE) -f CMakeFiles/can_bus.dir/build.make CMakeFiles/can_bus.dir/data_frame_st.c.o
+.PHONY : data_frame_st.c.o
 
-func.i: func.c.i
+data_frame_st.i: data_frame_st.c.i
 
-.PHONY : func.i
+.PHONY : data_frame_st.i
 
 # target to preprocess a source file
-func.c.i:
-	$(MAKE) -f CMakeFiles/can_bus.dir/build.make CMakeFiles/can_bus.dir/func.c.i
-.PHONY : func.c.i
+data_frame_st.c.i:
+	$(MAKE) -f CMakeFiles/can_bus.dir/build.make CMakeFiles/can_bus.dir/data_frame_st.c.i
+.PHONY : data_frame_st.c.i
 
-func.s: func.c.s
+data_frame_st.s: data_frame_st.c.s
 
-.PHONY : func.s
+.PHONY : data_frame_st.s
 
 # target to generate assembly for a file
-func.c.s:
-	$(MAKE) -f CMakeFiles/can_bus.dir/build.make CMakeFiles/can_bus.dir/func.c.s
-.PHONY : func.c.s
+data_frame_st.c.s:
+	$(MAKE) -f CMakeFiles/can_bus.dir/build.make CMakeFiles/can_bus.dir/data_frame_st.c.s
+.PHONY : data_frame_st.c.s
 
 main.o: main.c.o
 
@@ -177,6 +177,33 @@ main.c.s:
 	$(MAKE) -f CMakeFiles/can_bus.dir/build.make CMakeFiles/can_bus.dir/main.c.s
 .PHONY : main.c.s
 
+wheel_speeds.o: wheel_speeds.c.o
+
+.PHONY : wheel_speeds.o
+
+# target to build an object file
+wheel_speeds.c.o:
+	$(MAKE) -f CMakeFiles/can_bus.dir/build.make CMakeFiles/can_bus.dir/wheel_speeds.c.o
+.PHONY : wheel_speeds.c.o
+
+wheel_speeds.i: wheel_speeds.c.i
+
+.PHONY : wheel_speeds.i
+
+# target to preprocess a source file
+wheel_speeds.c.i:
+	$(MAKE) -f CMakeFiles/can_bus.dir/build.make CMakeFiles/can_bus.dir/wheel_speeds.c.i
+.PHONY : wheel_speeds.c.i
+
+wheel_speeds.s: wheel_speeds.c.s
+
+.PHONY : wheel_speeds.s
+
+# target to generate assembly for a file
+wheel_speeds.c.s:
+	$(MAKE) -f CMakeFiles/can_bus.dir/build.make CMakeFiles/can_bus.dir/wheel_speeds.c.s
+.PHONY : wheel_speeds.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -186,12 +213,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... can_bus"
-	@echo "... func.o"
-	@echo "... func.i"
-	@echo "... func.s"
+	@echo "... data_frame_st.o"
+	@echo "... data_frame_st.i"
+	@echo "... data_frame_st.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... wheel_speeds.o"
+	@echo "... wheel_speeds.i"
+	@echo "... wheel_speeds.s"
 .PHONY : help
 
 
