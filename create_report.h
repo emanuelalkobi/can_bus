@@ -10,6 +10,12 @@
 #include "wheel_speeds.h"
 
 
+//All these function write the next statistics to the summary_report.txt
+//1.number of sent message over the CAN bus
+//2.number of queued message over the CAN bus
+//3.jitter value per message types
+//4.avergae bandwidth
+
 void get_number_messages_stats(FILE* summary_report,int wheel_speeds_msg,int break_module_msg,int powertrain_msg,int wheel_speeds_msg_q,int break_module_msg_q,int powertrain_msg_q);
 
 
