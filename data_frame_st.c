@@ -23,7 +23,7 @@ data_frame* create_data_frame(int id,int size){
     data_frame_new->ide            =0;
     data_frame_new->r0             =0;
     data_frame_new->dlc            =size;
-    data_frame_new->data_field     =(unsigned int*)malloc(sizeof(unsigned int) * size);
+    data_frame_new->data_field     =(unsigned int*)malloc(size);
 
     if(!data_frame_new->data_field){
         printf("Error in allocation memory data_frame->data_field");

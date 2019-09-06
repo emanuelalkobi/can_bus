@@ -6,24 +6,52 @@
 
 
 
-bool wheel_speeds_out_of_bounds( double fl,double fr,double rl,double rr){
+
+bool wheel_speeds_out_of_bounds(unsigned int  fl,unsigned int fr,unsigned int rl,unsigned int rr){
     if((fl<WHEEL_SPEED_MIN || fl> WHEEL_SPEED_MAX) || (fr<WHEEL_SPEED_MIN || fr> WHEEL_SPEED_MAX) || (rl<WHEEL_SPEED_MIN || rl> WHEEL_SPEED_MAX) || (rr<WHEEL_SPEED_MIN || rr> WHEEL_SPEED_MAX)) return false;
     return true;
 }
 
+void insert_dbc_format( data_frame* data_frame_new,unsigned int fl,unsigned int fr,unsigned int rl,unsigned int rr){
+    data_frame_new->data_field[0]= (fl & 0x7f80)>>7                      ;
+    data_frame_new->data_field[1]= (fl& 0x7f)<<1     | (fr & 0x4000)>>14 ;
+    data_frame_new->data_field[2]= (fr& 0x3fc0)>>6                       ;
+    data_frame_new->data_field[3]= (fr & 0x3f)<<2    | (rl & 0x6000)>>13 ;
+    data_frame_new->data_field[4]= (rl & 0x1fe0)>>5                      ;
+    data_frame_new->data_field[5]= (rl & 0x1f)<<3    | (rr & 0x7000)>>12 ;
+    data_frame_new->data_field[6]= (rr & 0xff0)>>4                       ;
+    data_frame_new->data_field[7]= (rr & 0xf)<<4                         ;
+    return;
 
-data_frame* create_wheel_speeds( double fl,double fr,double rl,double rr){
+}
+
+void parse_dbc_format(data_frame* data_frame_new){
+
+    unsigned  int fl_short_new = (data_frame_new->data_field[0])<< 7        | (data_frame_new->data_field[1])>>1                                      ;
+    unsigned  int fr_short_new = (data_frame_new->data_field[1] & 0x1)<< 14 | (data_frame_new->data_field[2])<<6 | (data_frame_new->data_field[3])>>2 ;
+    unsigned  int rl_short_new = (data_frame_new->data_field[3] & 0x3)<< 13 | (data_frame_new->data_field[4])<<5 | (data_frame_new->data_field[5])>>3 ;
+    unsigned  int rr_short_new = (data_frame_new->data_field[5] & 0x7)<< 12 | (data_frame_new->data_field[6])<<4 | (data_frame_new->data_field[7])>>4 ;
+    printf("!!!!fl short %u  \n", fl_short_new);
+    printf("!!!!fr short %u  \n", fr_short_new);
+    printf("!!!!rl short %u  \n", rl_short_new);
+    printf("!!!!rr short %u  \n", rr_short_new);
+}
+
+
+data_frame* create_wheel_speeds( unsigned int fl,unsigned int fr,unsigned int rl,unsigned int rr){
     if(!wheel_speeds_out_of_bounds(fl,fr,rl,rr)){
-        printf("Wheel speeds value is between 0 to 250 only\n");
+        printf("Wheel speeds value is between 0 to 250/SCALE only\n");
         return NULL;
     }
     data_frame* data_frame_new=create_data_frame(WHEEL_SPEED_ID,WHEEL_SPEED_SIZE);
-    
-    for(int i=0;i<WHEEL_SPEED_SIZE;i++){
-        data_frame_new->data_field[i]=i*123;
+    if(!data_frame_new){
+        return  NULL;
     }
-    printf("id is %u size is %lu\n",data_frame_new->identifier, sizeof(data_frame_new->data_field));
+    insert_dbc_format(data_frame_new,fl,fr,rl,rr);
+    parse_dbc_format(data_frame_new);
 
 
 
+
+    return NULL;
 }

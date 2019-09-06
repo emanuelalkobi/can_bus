@@ -15,7 +15,7 @@ typedef  struct  {
     unsigned int  ide            : 1;  //Must be dominant (0) for base frame format with 11-bit identifiers
     unsigned int  r0             : 1;  //Reserved bit. Must be dominant (0), but accepted as either dominant or recessive.
     unsigned int  dlc            : 4;  //Number of bytes of data (0–8 bytes)
-    unsigned int* data_field     ;     //Data to be transmitted (length in bytes dictated by DLC field).Pointer as his size depends on dlc value;
+    unsigned char* data_field     ;     //Data to be transmitted (length in bytes dictated by DLC field).Pointer as his size depends on dlc value;
     unsigned int  crc            : 15; //Cyclic redundancy check
     unsigned int  crc_del        : 1;  //Must be recessive (1)
     unsigned int  ack_slot       : 1;  //Transmitter sends recessive (1) and any receiver can assert a dominant (0)

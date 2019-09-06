@@ -9,10 +9,6 @@
 #define  POWERTRAIN_MODULE_FREQ  25
 
 
-#define WHEEL_SPEED_ID   464
-#define WHEEL_SPEED_SIZE 8
-#define WHEEL_SPEED_MIN 0
-#define WHEEL_SPEED_MAX 250
 #define BREAK_MODULE_ID 446
 #define POWERTRAIN_DATA 380
 
@@ -35,7 +31,7 @@ int main() {
 
 
     printf("------\n");
-    data_frame* df=create_wheel_speeds(1,1,1,1);
+    data_frame* df=create_wheel_speeds(5000,7500,10000,12500);
     printf("------\n");
 
     printf("drive time in sec %d\n",drive_session_time_sec);
@@ -44,7 +40,7 @@ int main() {
     int curr_time_usec=0;
 
     while(curr_time_usec<drive_session_time_usec){
-
+        break;
     }
 
 
