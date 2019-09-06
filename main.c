@@ -3,6 +3,7 @@
 #include <stdbool.h>
 #include "data_frame_st.h"
 #include "wheel_speeds.h"
+#include "brake_module.h"
 
 #define  WHEEL_SPEEDS_FREQ 100
 #define  BREAK_MODULE_FREQ 10
@@ -31,7 +32,8 @@ int main() {
 
 
     printf("------\n");
-    data_frame* df=create_wheel_speeds(5000,7500,10000,12500);
+    data_frame* df1=create_wheel_speeds(5000,7500,10000,12500);
+    data_frame* df2=create_break_module(1);
     printf("------\n");
 
     printf("drive time in sec %d\n",drive_session_time_sec);

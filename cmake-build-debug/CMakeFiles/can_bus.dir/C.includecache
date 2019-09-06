@@ -6,7 +6,35 @@
 
 #IncludeRegexTransform: 
 
+/Users/emanuelalkobi/CLionProjects/can_bus/brake_module.c
+brake_module.h
+/Users/emanuelalkobi/CLionProjects/can_bus/brake_module.h
+
+/Users/emanuelalkobi/CLionProjects/can_bus/brake_module.h
+stdio.h
+-
+stdlib.h
+-
+stdbool.h
+-
+data_frame_st.h
 /Users/emanuelalkobi/CLionProjects/can_bus/data_frame_st.h
+
+/Users/emanuelalkobi/CLionProjects/can_bus/data_frame_st.h
+
+/Users/emanuelalkobi/CLionProjects/can_bus/main.c
+stdio.h
+-
+stdlib.h
+-
+stdbool.h
+-
+data_frame_st.h
+/Users/emanuelalkobi/CLionProjects/can_bus/data_frame_st.h
+wheel_speeds.h
+/Users/emanuelalkobi/CLionProjects/can_bus/wheel_speeds.h
+brake_module.h
+/Users/emanuelalkobi/CLionProjects/can_bus/brake_module.h
 
 /Users/emanuelalkobi/CLionProjects/can_bus/wheel_speeds.c
 wheel_speeds.h

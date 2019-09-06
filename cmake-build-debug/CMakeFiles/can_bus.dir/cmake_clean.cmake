@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/can_bus.dir/main.c.o"
   "CMakeFiles/can_bus.dir/data_frame_st.c.o"
   "CMakeFiles/can_bus.dir/wheel_speeds.c.o"
+  "CMakeFiles/can_bus.dir/brake_module.c.o"
   "can_bus.pdb"
   "can_bus"
 )

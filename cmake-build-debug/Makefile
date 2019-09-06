@@ -123,6 +123,33 @@ can_bus/fast:
 	$(MAKE) -f CMakeFiles/can_bus.dir/build.make CMakeFiles/can_bus.dir/build
 .PHONY : can_bus/fast
 
+brake_module.o: brake_module.c.o
+
+.PHONY : brake_module.o
+
+# target to build an object file
+brake_module.c.o:
+	$(MAKE) -f CMakeFiles/can_bus.dir/build.make CMakeFiles/can_bus.dir/brake_module.c.o
+.PHONY : brake_module.c.o
+
+brake_module.i: brake_module.c.i
+
+.PHONY : brake_module.i
+
+# target to preprocess a source file
+brake_module.c.i:
+	$(MAKE) -f CMakeFiles/can_bus.dir/build.make CMakeFiles/can_bus.dir/brake_module.c.i
+.PHONY : brake_module.c.i
+
+brake_module.s: brake_module.c.s
+
+.PHONY : brake_module.s
+
+# target to generate assembly for a file
+brake_module.c.s:
+	$(MAKE) -f CMakeFiles/can_bus.dir/build.make CMakeFiles/can_bus.dir/brake_module.c.s
+.PHONY : brake_module.c.s
+
 data_frame_st.o: data_frame_st.c.o
 
 .PHONY : data_frame_st.o
@@ -213,6 +240,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... can_bus"
+	@echo "... brake_module.o"
+	@echo "... brake_module.i"
+	@echo "... brake_module.s"
 	@echo "... data_frame_st.o"
 	@echo "... data_frame_st.i"
 	@echo "... data_frame_st.s"

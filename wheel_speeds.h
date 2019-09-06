@@ -2,13 +2,15 @@
 // Created by emanuel alkobi on 06/09/2019.
 //
 
+
+
+#ifndef CAN_BUS_WHEEL_SPEEDS_H
+#define CAN_BUS_WHEEL_SPEEDS_H
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
 #include "data_frame_st.h"
-
-#ifndef CAN_BUS_WHEEL_SPEEDS_H
-#define CAN_BUS_WHEEL_SPEEDS_H
 
 #define WHEEL_SPEED_ID   464
 #define WHEEL_SPEED_SIZE 8
@@ -35,9 +37,9 @@
 bool wheel_speeds_out_of_bounds( unsigned int fl,unsigned int fr,unsigned int rl,unsigned int rr);
 
 /*
- * Function: wheel_speeds_out_of_bounds
+ * Function: create_wheel_speeds
  * ----------------------------
- *   check that al wheel speeds are between WHEEL_SPEED_MIN to WHEEL_SPEED_MAX
+ *   create a new wheel_speeds message
  *
  *   fl:   front left wheel speed
  *   fr:   front right wheel speed
@@ -50,7 +52,7 @@ data_frame* create_wheel_speeds( unsigned int fl,unsigned int fr,unsigned int rl
 
 
 /*
- * Function: insert_dbc_format
+ * Function: insert_wheel_speed_dbc_format
  * ----------------------------
  *   insert the data tp data_frame_new in dbc format for wheel speeds
  *
@@ -61,17 +63,17 @@ data_frame* create_wheel_speeds( unsigned int fl,unsigned int fr,unsigned int rl
  *   data_frame_new : the data frame to insert the wheel speeds
  *
  */
-void insert_dbc_format( data_frame* data_frame_new,unsigned int fl,unsigned int fr,unsigned int rl,unsigned int rr);
+void insert_wheel_speed_dbc_format( data_frame* data_frame_new,unsigned int fl,unsigned int fr,unsigned int rl,unsigned int rr);
 
 /*
- * Function: parse_dbc_format
+ * Function: parse_wheel_speed_dbc_format
  * ----------------------------
  *   parse the data stored in the frame based on the dbc format
  *
  *   data_frame_new : the data frame to parse from  the wheel speeds
  *
  */
-void parse_dbc_format(data_frame* data_frame_new);
+void parse_wheel_speed_dbc_format(data_frame* data_frame_new);
 
 
 

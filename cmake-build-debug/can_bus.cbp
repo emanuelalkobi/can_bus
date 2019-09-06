@@ -78,6 +78,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/emanuelalkobi/CLionProjects/can_bus/brake_module.c">
+			<Option target="can_bus"/>
+		</Unit>
+		<Unit filename="/Users/emanuelalkobi/CLionProjects/can_bus/brake_module.h">
+			<Option target="can_bus"/>
+		</Unit>
 		<Unit filename="/Users/emanuelalkobi/CLionProjects/can_bus/data_frame_st.c">
 			<Option target="can_bus"/>
 		</Unit>

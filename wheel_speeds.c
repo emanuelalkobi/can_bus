@@ -12,7 +12,7 @@ bool wheel_speeds_out_of_bounds(unsigned int  fl,unsigned int fr,unsigned int rl
     return true;
 }
 
-void insert_dbc_format( data_frame* data_frame_new,unsigned int fl,unsigned int fr,unsigned int rl,unsigned int rr){
+void insert_wheel_speed_dbc_format( data_frame* data_frame_new,unsigned int fl,unsigned int fr,unsigned int rl,unsigned int rr){
     data_frame_new->data_field[0]= (fl & 0x7f80)>>7                      ;
     data_frame_new->data_field[1]= (fl& 0x7f)<<1     | (fr & 0x4000)>>14 ;
     data_frame_new->data_field[2]= (fr& 0x3fc0)>>6                       ;
@@ -25,7 +25,7 @@ void insert_dbc_format( data_frame* data_frame_new,unsigned int fl,unsigned int 
 
 }
 
-void parse_dbc_format(data_frame* data_frame_new){
+void parse_wheel_speed_dbc_format(data_frame* data_frame_new){
 
     unsigned  int fl_short_new = (data_frame_new->data_field[0])<< 7        | (data_frame_new->data_field[1])>>1                                      ;
     unsigned  int fr_short_new = (data_frame_new->data_field[1] & 0x1)<< 14 | (data_frame_new->data_field[2])<<6 | (data_frame_new->data_field[3])>>2 ;
@@ -47,11 +47,11 @@ data_frame* create_wheel_speeds( unsigned int fl,unsigned int fr,unsigned int rl
     if(!data_frame_new){
         return  NULL;
     }
-    insert_dbc_format(data_frame_new,fl,fr,rl,rr);
-    parse_dbc_format(data_frame_new);
+    insert_wheel_speed_dbc_format(data_frame_new,fl,fr,rl,rr);
+    parse_wheel_speed_dbc_format(data_frame_new);
 
 
 
 
-    return NULL;
+    return data_frame_new;
 }
